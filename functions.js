@@ -81,11 +81,11 @@ withdrawal(amount)
 
 var balance = 1000
 
-const cashMachine = (pin, operation='', amount) =>
+const cashMachine = (pin, operation, amount) =>
 {
     if (pin == 1234)
     {
-        switch (operation.toLowerCase)
+        switch (operation)
         {
             case 'b':
                     console.log(`Your balance is £${balance}`)
@@ -144,13 +144,13 @@ cashMachine(pin, 'w', amount)
 console.log("\nScenaro 4 - withdraw some money")
 amount = 430
 pin = 1234
-cashMachine(pin, 'w', 'amount')
+cashMachine(pin, 'w', amount)
 // withdraw £200
 amount = 200
 pin = 1234
 cashMachine(pin, 'w', amount)
 
-// scenaro 5 - 
+// scenaro 5 - display balance
 // withdraw £430
 console.log("\nScenaro 5 - display balance")
 cashMachine(pin, 'b', amount)
